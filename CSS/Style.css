@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+    line-height: 1;
+}
+
+s {
+    position: absolute;
+    margin: 1rem;
+}
+
+p, s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+}
+
+.main-container {
+    margin: 10% auto;
+    width: 32%;
+    min-width: 600px; /* Postavite minimalnu širinu prema vašim potrebama */
+    flex-shrink: 0; /* Sprječava smanjenje elementa kada nema dovoljno prostora */
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+
+
+#info {
+    padding: 2rem;
+}
+
+/* Perfume Paragraph */
+
+.product {
+    letter-spacing: 2px;
+}
+
+/* Price Paragraph */
+
+.price{
+    font-size: 2rem;
+    padding: 24px 0;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+
+.btn {
+    display: inline-flex;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #1a4031;
+}
+
+.btn-text {
+    vertical-align: middle;
+}
+
+.btn img {
+    margin: 0 8px 0px 52px;
+}
+
+.desktop-image {
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Sakrij desktop sliku na mobilnim uređajima */
+.mobile-image {
+    display: none;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 375px) {
+    
+    .main-container {
+      flex-direction: column;
+      width: 90%; 
+      min-width: auto;
+    }
+  
+    .desktop-image {
+      display: none;
+    }
+  
+    .mobile-image {
+      display: block;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  
+    #info {
+      padding: 20px; 
+    }
+  
+    .product {
+        letter-spacing: 3px;
+    }
+   
+    .btn img {
+        margin-left: 78px;
+    }
+
+  }
